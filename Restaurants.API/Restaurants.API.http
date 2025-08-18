@@ -1,0 +1,32 @@
+@Restaurants.API_HostAddress = https://localhost:7180
+@host = http://localhost
+@port = 5218
+
+
+GET {{Restaurants.API_HostAddress}}/weatherforecast/weatherForecast
+
+###
+
+GET {{Restaurants.API_HostAddress}}/weatherforecast/healthCheck
+
+###
+
+POST {{Restaurants.API_HostAddress}}/weatherforecast/hello
+Content-Type: application/json
+
+{
+    "name": "Lucas"
+}
+
+###
+
+@num=4
+POST {{Restaurants.API_HostAddress}}/weatherforecast/generate?num={{num}}
+Content-Type: application/json
+
+{
+    "min": 23,
+    "max": 54,
+}
+
+###
