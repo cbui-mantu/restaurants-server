@@ -18,7 +18,7 @@ namespace Restaurants.Infrastructure.Extensions
             services.AddDbContext<RestaurantsDbContext>(opt => opt.UseSqlServer(connectionString));
 
             services.AddScoped<IRestaurantSeeder, RestaurantSeeder>();
-            services.AddScoped<IRestaurantService, RestaurantService>();
+            services.AddScoped<IRestaurantRepository, RestaurantRepository>();
             services.AddScoped<IUserService, InMemoryUserService>();
         }
     }
