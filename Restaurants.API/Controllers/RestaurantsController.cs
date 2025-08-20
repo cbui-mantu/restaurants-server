@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Restaurants.Application.Restaurants.Interfaces;
 using Restaurants.Application.Restaurants.Models;
@@ -6,6 +7,7 @@ namespace Restaurants.API.Controllers
 {
 	[ApiController]
 	[Route("api/[controller]")]
+	[Authorize(Roles = "Admin")]
 	public class RestaurantsController(IRestaurantService restaurantService) : ControllerBase
 	{
 		[HttpGet]
