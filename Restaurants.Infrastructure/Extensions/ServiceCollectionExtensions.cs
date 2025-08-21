@@ -5,6 +5,8 @@ using Restaurants.Infrastructure.Persistence;
 using Restaurants.Infrastructure.Seeders;
 using Restaurants.Application.Restaurants.Interfaces;
 using Restaurants.Infrastructure.Restaurants;
+using Restaurants.Application.Auth.Interfaces;
+using Restaurants.Infrastructure.Auth;
 
 namespace Restaurants.Infrastructure.Extensions
 {
@@ -16,7 +18,8 @@ namespace Restaurants.Infrastructure.Extensions
             services.AddDbContext<RestaurantsDbContext>(opt => opt.UseSqlServer(connectionString));
 
             services.AddScoped<IRestaurantSeeder, RestaurantSeeder>();
-            services.AddScoped<IRestaurantService, RestaurantService>();
+            services.AddScoped<IRestaurantRepository, RestaurantRepository>();
+            services.AddScoped<IUserService, InMemoryUserService>();
         }
     }
 }
