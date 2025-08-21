@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Restaurants.Domain.Entities;
 
 namespace Restaurants.Infrastructure.Persistence
@@ -22,7 +17,7 @@ namespace Restaurants.Infrastructure.Persistence
                 .HasMany(r => r.Dished)
                 .WithOne()
                 .HasForeignKey(d => d.RestaurantId);
-            
+
         }
 
     }
