@@ -3,9 +3,9 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Restaurants.API.Controllers;
 using Restaurants.Application.Extensions;
+using Restaurants.Infrastructure.Auth;
 using Restaurants.Infrastructure.Extensions;
 using Restaurants.Infrastructure.Seeders;
-using Restaurants.Infrastructure.Auth;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
